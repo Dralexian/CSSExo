@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
 }
 
@@ -10,18 +8,17 @@ body {
     font-family: sans-serif;
 }
 
-div.menu > div {
-    text-align: center;
-
-}
-
 div div {
     padding: 0 10px;
     border: 1px solid blue;
     margin: 1px 0;
 }
 
-@media screen and (max-width :639px) {
+@media screen and (max-width: 640px) {
+    .menu {
+        margin: auto;
+        text-align: center;
+    }
 
     div div {
         float: left;
@@ -38,9 +35,14 @@ div div {
     }
 }
 
-@media screen and (min-width :640px) and (max-width :1023) {
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    .menu {
+        margin: auto;
+        text-align: center;
+    }
 
-    div div {
+    .col-md-6,
+    .col-md-2 {
         float: left;
         background-color: orange;
     }
@@ -48,6 +50,34 @@ div div {
     .col-md-6 {
         width: 50%;
     }
+
+    .col-md-2 {
+        width: 16.6%;
+    }
 }
 
-@media screen and (min-width :1024px) {}
+@media screen and (min-width :1024px) {
+    .menu {
+        margin: auto;
+        text-align: center;
+    }
+
+    .col-l-6,
+    .col-l-3,
+    .col-l-1 {
+        float: left;
+        background-color: lime;
+    }
+
+    .col-l-6 {
+        width: 50%;
+    }
+}
+
+.col-l-3 {
+    width: 25%;
+}
+
+.col-l-1 {
+    width: 8.33%;
+}
